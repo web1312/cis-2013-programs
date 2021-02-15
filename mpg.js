@@ -1,5 +1,4 @@
 <script>
-     var miles, gallons, mpg;
      var floatMiles, floatGallons, floatMPG;
      floatMiles = parseMiles(prompt("Enter miles driven"));
      floatGallons = parseGallons(prompt("Enter gallons of gas used"));
