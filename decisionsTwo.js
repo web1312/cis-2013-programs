@@ -19,9 +19,9 @@ var calculate_click = function ()
     if (intGradeOption===1)
 {
     if(floatTotalPts >= 80){
-     alert("You passed");
+     stringFinalGrade = "pass";
     }
-    alert("You failed");
+    stringFinalGrade = "fail";
 }
 if(floatTotalPts>=90){
     stringFinalGrade = "A";
