@@ -9,6 +9,7 @@ var calculate_click = function ()
     var floatHwPts;
     var floatMidPts;
     var floatFinPts;
+    var floatTotalPts;
     var intGradeOption;
 
     floatHwPts = parseFloat($("hw_pts").value);
