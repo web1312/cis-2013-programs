@@ -36,7 +36,7 @@ else if (floatTotalPts<80 && floatTotalPts>= 70){
 else if (floatTotalPts<70 && floatTotalPts>= 60){
     stringFinalGrade = "D";
 }
-else{
+else if (floatTotalPts<60){
     stringFinalGrade = "F";
 }
 
