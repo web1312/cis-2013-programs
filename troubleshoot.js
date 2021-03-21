@@ -71,8 +71,9 @@ var fixPrinter = function() {
         }
       }
     }
+    $("output").value = stringOutput;
 };
- $("output").value = stringOutput;
+ 
 window.onload = function () {
     $("troubleshoot").onclick = fixPrinter;
 };
