@@ -45,7 +45,6 @@ var fixPrinter = function() {
                 stringOutput = stringMessage6;
             }
         }
-        $("output").value = stringOutput;
     }
     else
     {
@@ -71,9 +70,8 @@ var fixPrinter = function() {
            stringOutput =  stringMessage5;
         }
       }
-      $("output").value = stringOutput;
     }
-    
+    $("output").value = stringOutput;
 };
  
 window.onload = function () {
