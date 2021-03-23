@@ -24,53 +24,38 @@ var fixPrinter = function() {
     var boolRecognised = $("not_recognised").selected;  ////returns a value of true only when the not_recognized html id is selected from the dropdown menu
 
     //enter your code here and don't forget to send the output to the DOM
-    if (boolPrinting == true){
-        if(boolRedLight == true){
-            if (boolRecognised == true){
-                stringOutput= stringMessage3 + stringMessage4;
-            
-            }
-            else
-            {
-                stringOutput = stringMessage4;
-            }
-        }
-        else {
-            if (boolRecognised == true)
-            {
-                stringOutput = stringMessage3;
-            }
-            else
-            {
-                stringOutput = stringMessage6;
-            }
-        }
-    }
-    else
+  if(boolPrinting === true && boolRedLight === true && boolRecognised === true)
     {
-      if (boolRedLight == true)
-      {
-        if(boolRecognised == true)
-        {
-            stringOutput = stringMessage2+stringMessage3+stringMessage4;
-        }
-        else
-        {
-           stringOutput = stringMessage4+stringMessage5; 
-        }
-      }
-      else
-      {
-        if(boolRecognised == true)
-        {
-            stringOutput = stringMessage1+stringMessage2+stringMessage3;
-        }
-        else
-        {
-           stringOutput =  stringMessage5;
-        }
-      }
+      stringOutput = stringMessage2 + "\n" + stringMessage3 + "\n" + stringMessage4;
     }
+        else if (boolPrinting === true && boolRedLight === true && boolRecognised === false)
+        {
+      stringOutput = stringMessage4 + "\n" + stringMessage5;
+        }
+             else if (boolPrinting === true && boolRedLight === false && boolRecognised === true)
+            {
+        stringOutput = stringMessage1 + "\n" + stringMessage2 + "\n" + stringMessage3;
+            }
+                 else if (boolPrinting === true && boolRedLight === false && boolRecognised === false)
+                {
+            stringOutput = stringMessage5 ;
+                }
+                     else if (boolPrinting === false && boolRedLight === true && boolRecognised === true)
+                    {
+                stringOutput = stringMessage3 + "\n" + stringMessage4;
+                    }
+                         else if (boolPrinting === false && boolRedLight === true && boolRecognised === false)
+                        {
+                    stringOutput = stringMessage4;
+                        }
+                             else if (boolPrinting === false && boolRedLight === false && boolRecognised === true)
+                            {
+                        stringOutput = stringMessage3;
+                            }
+                                 else if (boolPrinting === false && boolRedLight === false && boolRecognised === false)
+                                {
+                            stringOutput = stringMessage6;
+                                }
     $("output").value = stringOutput;
 };
  
