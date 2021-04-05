@@ -1,14 +1,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #666666;
+    background: #5bb5b1;
 }
 
 #content {
     width: 600px;
     margin: 10px auto;
     padding: 5px 20px;
-    background: #FFFFFF;
-    border: 1px solid #000000;
+    background: #000000;
+    border: 5px solid #ffffff;
 }
 
 h1 {
@@ -36,7 +36,7 @@ input {
 }
 
 #futureValue {
-    color: #000000;
+    color: #f5021b;
 }
 
 br {
