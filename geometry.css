@@ -10,6 +10,9 @@ body {
     background: #000000;
     border: 5px solid #ffffff;
 }
+text{
+    color: white;
+}
 
 h1 {
 	text-align: center;
