@@ -60,7 +60,7 @@ intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin);
  * and then validates that the user entered an actual number and makes sure that the
  * number is between the allowed max and min number choices.
 */
-
+intGuess = parseFloat(prompt("Please enter guess: "));
 
 
 
