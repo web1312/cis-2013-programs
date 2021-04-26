@@ -22,5 +22,6 @@ for(var x=1; x<=12; x++){
     for(var y=1; y<=12; y++){
         stringTimesTable = stringTimesTable + " " + x*y + " ";
     }
+    stringTimesTable += "\n";
 }
 alert(stringTimesTable);
