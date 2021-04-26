@@ -11,11 +11,10 @@ var intMax, intMin, intRandom, intGuess, intCount;
  * number is at least 0.
 */
 //prompts user for minimum number 
-intMin = parseFloat(prompt("Please enter low number of guessing range: "));
+intMin = parseInt(prompt("Please enter low number of guessing range: "));
 //validates that user gave valid number-positive and an int value
-while (intMin.isNaN() ||intMin <0){
-    System.out.print("Please enter a valid positive number.");
-    intMin = parseFloat(prompt("Please enter low number of guessing range: "));
+while (isNaN(intMin) || intMin <0){
+    intMin = parseFloat(prompt("There was an error. Please enter a valid positive number: "));
 }
 
 
@@ -29,11 +28,10 @@ while (intMin.isNaN() ||intMin <0){
  * number is at least 2 more than the minimum (so that there is some guessing involved).
 */
 //prompts user for maximum number 
-intMax = parseFloat(prompt("Please enter high number of guessing range: "));
+intMax = parseInt(prompt("Please enter high number of guessing range: "));
 //validates that user gave valid number-positive and an int value
-while (intMax.isNaN() || intMax < intMin+2){
-    System.out.print("Please enter a number at least 2 more than the minimum.");
-    intMax = parseFloat(prompt("Please enter high number of guessing range: "));
+while (isNaN(intMax) || intMax < (intMin+2)){
+    intMax = parseInt(prompt("Number must be at least 2 higher than minimum. Please enter new high number of guessing range: "));
 }
 
 
@@ -53,14 +51,17 @@ intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin);
 
 
 // set the loop counter
-
+intCount = 1;
 
 
 /* the following section prompts the user to enter their guess
  * and then validates that the user entered an actual number and makes sure that the
  * number is between the allowed max and min number choices.
 */
-intGuess = parseFloat(prompt("Please enter guess: "));
+intGuess = parseInt(prompt("Please enter guess between "+intMin+ " and " +intMax+": "));
+while(intGuess < intMin || intGuess > intMax || isNaN(intGuess)){
+    intGuess = parseInt(prompt("Your guess was invalid. Please guess again: "));
+}
 
 
 
@@ -71,7 +72,25 @@ intGuess = parseFloat(prompt("Please enter guess: "));
  * is given based upon whether the guess is higher or lower. The loop exits when
  * the user chooses the correct number. Each time through the loop updates the loop counter.
  */
-
+while (intGuess != intRandom)
+{
+    if (intGuess < intRandom)
+    {
+        intGuess = parseInt(prompt("Your guess was too low. Please guess again: "));
+        while (isNaN(intGuess) || intGuess > intMax || intGuess < intMin)
+        {
+            intGuess = parseInt(prompt("There was an error. Please choose a number between " + intMin + " and " + intMax + ": "));
+        }
+    }
+    else {
+        intGuess = parseInt(prompt("Your guess of was too high. Please guess again."));
+        while (isNaN(intGuess) || intGuess > intMax || intGuess < intMin)
+        {
+            intGuess = parseInt(prompt("There was an error. Please choose a number between " + intMin + " and " + intMax));
+        }
+    }
+    intCount++;
+}
  
  
  
