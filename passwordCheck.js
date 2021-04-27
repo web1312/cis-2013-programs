@@ -16,7 +16,7 @@ var passwordCheckOld = function ()
     if(stringPassword.length < 8){
         stringOutput = "Your password is too short. Please pick one with at least 8 characters.";
     }
-    else{ 
+    /* else{ 
         for(i = 0; i<arrayBadPasswords.length; i++){ //checks if the user's password is in list of bad passwords
             if(stringPassword == arrayBadPasswords[i]){
                 stringOutput = "Please choose a stronger password. The selected password is on list of commonly used passwords.";
@@ -28,8 +28,8 @@ var passwordCheckOld = function ()
         }
         
     }
-};
-
+*/ };
+//inputs solution through DOM
 window.onload = function () 
 {
 //    $("password").value = "";
