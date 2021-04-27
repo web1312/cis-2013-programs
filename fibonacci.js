@@ -14,9 +14,9 @@ var generate = function ()
 	//validate user input that intCount is a number and intCount is not less than 2 or intCount not greater than 100
 	if(isNaN(intCount) || intCount<1 || intCount > 100){
         alert("Invalid number");
-        parseInt($("total_fib").value);
+        $("total_fib").value = "";
     }
-        
+    else{
 	var i=0;  // sets the first number in the Fibonacci series to 0
 	var j=1;  //sets the second number in the Fibonacci series to 1
 	var k;    //k is calculated by adding i+j and represents the next Fibonacci number
@@ -24,8 +24,16 @@ var generate = function ()
 
 	// write whatever kind of loop you want, given the above info, to generate the appropriate
 	// number of fibonacci numbers and then post it to the html DOM 
-
-} 
+    while(intCount>2){
+        k = i+j;
+        i = j;
+        j = k;
+        stringOutput = stringOutput + k + " ";
+        intCount--;
+    }
+    $("output").value = stringOutput;
+    }
+}
 
 // Push solution back to Output through DOM
 
