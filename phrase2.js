@@ -41,7 +41,21 @@ var consonants = function ()
 	{
 		var intConsonants = 0;
 		// insert for loop here
-		
+		for(intCount = 0; intCount < stringEntry.length ; intCount++)
+        {
+            switch(stringEntry.charAt(intCount))
+            {
+                case "a":
+                case "e":
+                case "i":
+                case"o":
+                case "u":
+                    break; //if vowel, breaks out of code
+                default: //if not vowel, consonant count increase
+                    intConsonants++;
+                    break;
+            }
+        }
 		
 		
 		$("output").value = "There are " + intConsonants + " consonants in the above phrase.";
