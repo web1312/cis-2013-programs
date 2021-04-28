@@ -50,6 +50,7 @@ var consonants = function ()
                 case "i":
                 case"o":
                 case "u":
+                case " ":
                     break; //if vowel, breaks out of code
                 default: //if not vowel, consonant count increase
                     intConsonants++;
