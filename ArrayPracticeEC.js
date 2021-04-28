@@ -39,16 +39,9 @@ for( var a =1; a<=12; a++)
     arrayTimesTable[a][b]= a*b;
   }
 }
-for(var s=1; s<=12; s++)
+if(arrayTimesTable[a][b].value %2 === 0)
 {
-  if(s%2 === 0)
-  {
-    for(var t=1; t<=12; t++)
-    {
-      stringEvenTimes= stringEvenTimes + " " + arrayTimesTable[s][t] + " ";
-    }
-    stringEvenTimes+="\n";
-  }
+  stringEvenTimes= stringEvenTimes +" "+arrayTimesTable[a][b]+ " ";
 }
 
 alert(arrayTimesTable);
