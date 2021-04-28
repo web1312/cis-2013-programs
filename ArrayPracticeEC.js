@@ -25,3 +25,30 @@ for(var x=1; x<=12; x++){
     stringTimesTable += "\n";
 }
 alert(stringTimesTable);
+
+//Task 3
+
+var stringEvenTimes = "";
+var arrayTimesTable = [];
+
+for( var a =1; a<=12; a++)
+{
+  arrayTimesTable[a] = [];
+  for(var b =1; b<=12; b++)
+  {
+    arrayTimesTable[a][b]= a*b;
+  }
+}
+for(var s=1; s<=12; s++)
+{
+  if(s%2 === 0)
+  {
+    for(var t=1; t<=12; t++)
+    {
+      stringEvenTimes= stringEvenTimes + " " + arrayTimesTable[s][t] + " ";
+    }
+    stringEvenTimes+="\n";
+  }
+}
+
+alert(arrayTimesTable);
